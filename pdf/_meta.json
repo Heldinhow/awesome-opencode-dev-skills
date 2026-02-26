@@ -1,0 +1,9 @@
+{
+  "name": "pdf",
+  "description": "Do anything with PDF files - read, extract, merge, split, create, etc.",
+  "emoji": "📕",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}

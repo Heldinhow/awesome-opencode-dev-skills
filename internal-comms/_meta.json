@@ -1,1 +1,9 @@
-{"name": "internal-comms", "version": "1.0.0", "description": "Internal communications templates"}
+{
+  "name": "internal-comms",
+  "description": "Write all kinds of internal communications using company formats",
+  "emoji": "📢",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}

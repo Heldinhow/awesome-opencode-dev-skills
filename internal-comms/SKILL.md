@@ -1,42 +1,37 @@
 ---
 name: internal-comms
-description: Write internal communications like status reports, newsletters, and FAQs
+description: A set of resources to help write all kinds of internal communications, using the formats that the company likes to use. Use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 metadata:
   clawdbot:
-    emoji: "📧"
+    emoji: "📢"
     requires:
       tools: [exec]
+      os: [linux, darwin, win32]
 ---
 
-# Internal Communications
+## When to use this skill
+To write internal communications, use this skill for:
+- 3P updates (Progress, Plans, Problems)
+- Company newsletters
+- FAQ responses
+- Status reports
+- Leadership updates
+- Project updates
+- Incident reports
 
-Write effective internal communications for teams and organizations.
+## How to use this skill
 
-## Types
+To write any internal communication:
 
-1. **Status Reports** - Weekly/periodic updates
-2. **Newsletters** - Team updates
-3. **FAQs** - Frequently asked questions
-4. **Announcements** - Important updates
-5. **Meeting Notes** - Action items
+1. **Identify the communication type** from the request
+2. **Load the appropriate guideline file** from the `examples/` directory:
+    - `examples/3p-updates.md` - For Progress/Plans/Problems team updates
+    - `examples/company-newsletter.md` - For company-wide newsletters
+    - `examples/faq-answers.md` - For answering frequently asked questions
+    - `examples/general-comms.md` - For anything else that doesn't explicitly match one of the above
+3. **Follow the specific instructions** in that file for formatting, tone, and content gathering
 
-## Structure
+If the communication type doesn't match any existing guideline, ask for clarification or more context about the desired format.
 
-### Status Report
-- What was accomplished
-- What needs attention
-- Next steps
-- Blockers
-
-### Newsletter
-- Key highlights
-- Team wins
-- Upcoming events
-- Personal notes
-
-## Best Practices
-
-- Be concise and scannable
-- Use clear headings
-- Include actionable items
-- Set appropriate tone
+## Keywords
+3P updates, company newsletter, company comms, weekly update, faqs, common questions, updates, internal comms

@@ -1,5 +1,9 @@
 {
   "name": "mcp-builder",
-  "version": "1.0.0",
-  "description": "Build"
+  "description": "Guide for creating high-quality MCP (Model Context Protocol) servers",
+  "emoji": "🔌",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
 }

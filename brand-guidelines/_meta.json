@@ -1,1 +1,9 @@
-{"name": "brand-guidelines", "version": "1.0.0", "description": "Apply brand colors and typography"}
+{
+  "name": "brand-guidelines",
+  "description": "Applies official brand colors and typography to any sort of artifact",
+  "emoji": "🎨",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}

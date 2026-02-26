@@ -1,0 +1,9 @@
+{
+  "name": "canvas-design",
+  "description": "Create beautiful visual art in .png and .pdf documents using design philosophy",
+  "emoji": "🎨",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}

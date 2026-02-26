@@ -1,0 +1,9 @@
+{
+  "name": "frontend-design",
+  "description": "Create distinctive, production-grade frontend interfaces with high design quality",
+  "emoji": "💻",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}

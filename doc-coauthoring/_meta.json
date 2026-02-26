@@ -1,0 +1,9 @@
+{
+  "name": "doc-coauthoring",
+  "description": "Guide users through a structured workflow for co-authoring documentation",
+  "emoji": "📝",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}
