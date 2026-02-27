@@ -1,6 +1,6 @@
 ---
 name: copilot-cli-subagents
-description: GitHub Copilot CLI for spawning and managing sub-agents. Use when you need to run AI-powered agents locally for coding tasks.
+description: GitHub Copilot CLI with built-in agents, custom agents, fleet mode, and subagent orchestration. Use for AI-powered coding tasks.
 metadata:
   clawdbot:
     emoji: "🤖"
@@ -9,132 +9,166 @@ metadata:
       os: [linux, darwin, win32]
 ---
 
-# Copilot CLI - Subagents
+# GitHub Copilot CLI - Subagents & Agents
 
-GitHub Copilot CLI (`copilot`) allows running AI agents for coding tasks with natural language.
+GitHub Copilot CLI has powerful built-in agents and supports custom agents for specialized tasks.
 
 ## Installation
 
 ```bash
-# Install Copilot CLI
+# Via npm
 npm install -g @github/copilot
 
 # Or via GitHub CLI
 gh extension install github/copilot-cli
 ```
 
-## Basic Usage
+## Built-in Specialized Agents
+
+Copilot automatically delegates to these agents:
+
+| Agent | Purpose |
+|-------|---------|
+| **Explore** | Fast codebase analysis |
+| **Task** | Running builds and tests |
+| **Code Review** | High-signal change review |
+| **Plan** | Implementation planning |
+
+## Usage
 
 ### Interactive Mode
 
 ```bash
-# Start interactive session
 copilot
-
-# Or with a specific task
-copilot "explain this codebase"
 ```
 
-### Flags
+### With Prompt
+
+```bash
+copilot "explain the auth system"
+```
+
+### Plan Mode
+
+- Press **Shift+Tab** to enter plan mode
+- Outline the work before execution
+- Use `/model` to compare approaches
+
+### Autopilot Mode
+
+- Press **Shift+Tab** after planning
+- Copilot executes without step-by-step approval
+
+## Fleet Mode (Subagent Orchestration)
+
+```bash
+# Enter fleet mode
+/fleet
+
+# Fleet coordinates subagents in background
+/fleet implement user auth
+```
+
+## Custom Agents
+
+### Create Agent
+
+Create `~/.copilot/agents/my-agent.yaml`:
+
+```yaml
+name: my-agent
+description: Agent for frontend tasks
+instructions: |
+  You are a frontend expert.
+  - Use React + TypeScript
+  - Follow team conventions
+  - Always add tests
+tools:
+  - git
+  - npm
+  - tests
+model: gpt-4o
+```
+
+### Use Custom Agent
+
+```bash
+copilot -t my-agent "create login component"
+```
+
+### Organization Agents
+
+Define agents in:
+- Repository: `.github/agents/`
+- Organization: `{org}/.github/agents/`
+
+## AGENTS.md
+
+Define custom instructions in project:
+
+```markdown
+# AGENTS.md
+
+## Project Context
+- Tech: React + Node.js
+- Testing: Vitest
+- Style: Tailwind CSS
+
+## Guidelines
+- Always write tests
+- Use TypeScript
+- Follow conventional commits
+```
+
+## Single Command Workflow
+
+```bash
+# One command to:
+# 1. Create branch
+# 2. Implement changes
+# 3. Open PR
+copilot pr "add user authentication"
+```
+
+## Flags
 
 | Flag | Description |
 |------|-------------|
-| `-t, --template` | Use a specific agent template |
-| `-m, --model` | Specify the model to use |
-| `--verbose` | Enable verbose output |
-| `--no-stream` | Disable streaming responses |
-
-## Agent Templates
-
-### Code Review
-
-```bash
-copilot review ./src --detailed
-```
-
-### Bug Fix
-
-```bash
-copilot fix "login not working"
-```
-
-### Explain
-
-```bash
-copilot explain "how does auth work"
-```
-
-### Tests
-
-```bash
-copilot test ./src/utils --coverage
-```
-
-## Spawning Subagents
-
-### Parallel Execution
-
-```bash
-# Run multiple tasks in parallel
-copilot "fix bug in auth" &
-copilot "add tests for utils" &
-wait
-```
-
-### Chained Agents
-
-```bash
-# Agent 1 creates PR
-PR=$(copilot pr create --fill)
-
-# Agent 2 reviews
-copilot pr review $PR --approve
-```
-
-## Configuration
-
-```bash
-# Set default model
-copilot config set model gpt-4o
-
-# Set verbosity
-copilot config set verbose true
-```
+| `-t, --template` | Use specific agent |
+| `-m, --model` | Specify model |
+| `--verbose` | Enable verbose |
+| `--no-stream` | Disable streaming |
 
 ## Environment Variables
 
 | Variable | Description |
-|---------|-------------|
+|----------|-------------|
 | `COPILOT_MODEL` | Default model |
-| `COPILOT_TIMEOUT` | Request timeout |
-| `GITHUB_TOKEN` | Authentication token |
+| `GITHUB_TOKEN` | Auth token |
 
 ## Best Practices
 
-1. **Be Specific** - Clear prompts get better results
-2. **Use Context** - Provide relevant files/directories
-3. **Iterate** - Refine prompts based on output
-4. **Review Always** - AI can make mistakes
+1. Use **Plan mode** for complex tasks
+2. Create **custom agents** for team conventions
+3. Use **AGENTS.md** for project context
+4. Leverage **Fleet** for multi-step tasks
+5. Always **review** AI-generated code
 
-## Integration with Workflows
-
-```bash
-# Pre-commit hook
-copilot pre-commit "check code style"
-
-# CI/CD
-copilot ci "run tests and report"
-```
-
-## Troubleshooting
+## Examples
 
 ```bash
-# Check auth
-copilot auth status
+# Code review
+copilot review ./src
 
-# Re-authenticate
-copilot auth login
+# Fix bug
+copilot fix "login redirect loop"
 
-# Clear cache
-copilot cache clear
+# Create feature
+copilot "add password reset flow"
+
+# Explore codebase
+copilot "how does payment work"
+
+# Run tests
+copilot test ./src --coverage
 ```
