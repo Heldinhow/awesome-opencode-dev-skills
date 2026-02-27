@@ -1,6 +1,6 @@
 ---
 name: copilot-cli-subagents
-description: GitHub Copilot CLI with subagents, multi-agent workflows, fleet mode, and orchestration. Use for AI-powered complex coding tasks.
+description: GitHub Copilot CLI with /fleet parallel execution, subagent orchestration, custom agents, and multi-agent workflows.
 metadata:
   clawdbot:
     emoji: "🤖"
@@ -9,9 +9,9 @@ metadata:
       os: [linux, darwin, win32]
 ---
 
-# GitHub Copilot CLI - Subagents & Multi-Agent Workflows
+# GitHub Copilot CLI - Fleet & Subagents
 
-GitHub Copilot CLI has powerful subagent support with context isolation, parallel execution, and orchestration.
+Official documentation-based guide for /fleet command and subagent orchestration.
 
 ## Installation
 
@@ -23,242 +23,217 @@ npm install -g @github/copilot
 gh extension install github/copilot-cli
 ```
 
-## How Subagents Work
+---
 
-### Context Isolation
-- Subagents operate with a **clean context**
-- Tasks don't affect the main agent's working context
-- Useful for large/complex tasks
-- Parts of work can be offloaded efficiently
+## /fleet Command
 
-### Delegation
-Main agent delegates tasks to subagents as **specialists**:
-- Security auditor
-- Documentation writer
-- Frontend expert
-- Backend specialist
+The `/fleet` command breaks complex requests into smaller tasks and runs them in **parallel** using subagents.
 
-## Built-in Specialized Agents
-
-| Agent | Purpose |
-|-------|---------|
-| **Explore** | Fast codebase analysis |
-| **Task** | Running builds and tests |
-| **Code Review** | High-signal change review |
-| **Plan** | Implementation planning |
-
-## Usage Modes
-
-### Interactive Mode
-
-```bash
-copilot
-```
-
-### With Prompt
-
-```bash
-copilot "explain the auth system"
-```
-
-### Plan Mode
-- Press **Shift+Tab** to enter plan mode
-- Outline work before execution
-- Use `/model` to compare approaches
-
-### Autopilot Mode
-- Press **Shift+Tab** after planning
-- Copilot executes without step-by-step approval
-
-## Fleet Mode (Parallel Execution)
+### Basic Usage
 
 ```bash
 # Enter fleet mode
-/fleet
-
-# Fleet coordinates multiple subagents in parallel
-/fleet implement user auth + tests + docs
+/fleet implement user authentication
 ```
 
-### How Fleet Works
-1. Main agent breaks down task into subtasks
-2. Multiple subagents execute **concurrently**
-3. Main agent orchestrates workflow and dependencies
-4. Results are aggregated
+### Workflow
+
+1. **Plan Mode** (Shift+Tab)
+   - Create implementation plan
+   - Review and refine
+
+2. **Execute with /fleet**
+   - `/fleet implement the plan`
+   - Copilot uses subagents for parallel execution
+
+### Monitoring
+
+```bash
+/tasks    # See all background tasks
+# Press Enter for details
+# Press k to kill
+# Press r to remove completed
+```
+
+---
+
+## How Subagents Work
+
+### Context Isolation
+- Each subagent has **own context window**
+- Separate from main agent
+- Focuses on specific task
+- Doesn't overwhelm with full context
+
+### Delegation
+Main agent acts as **orchestrator**:
+- Analyzes prompt
+- Breaks into subtasks
+- Assesses dependencies
+- Delegates to specialized subagents
+
+### Parallel Execution
+- Subtasks run **concurrently**
+- Dependencies managed by orchestrator
+- Faster completion for complex tasks
+
+---
 
 ## Custom Agents
 
-### Create Custom Agent
+### Create Agent
 
-Create `~/.copilot/agents/my-agent.yaml`:
+`~/.copilot/agents/expert-name.yaml`:
 
 ```yaml
-name: frontend-expert
-description: Expert in React and modern frontend
+name: security-expert
+description: Security vulnerability researcher
 instructions: |
-  You are a frontend development expert.
-  
-  Tech Stack:
-  - React 18 + TypeScript
-  - Tailwind CSS
-  - Vitest for testing
-  
-  Guidelines:
-  - Use functional components with hooks
-  - Write tests for all components
-  - Follow team conventions
-  - Use TypeScript strictly
-
+  You are a security expert.
+  - Check for OWASP vulnerabilities
+  - Validate authentication
+  - Review authorization
 tools:
   - git
-  - npm
-  - tests
-  - lint
-
+  - code-review
 model: gpt-4o
 ```
 
-### Agent Definition Locations
+### Locations
 
-| Scope | Location |
-|-------|----------|
-| Project | `.github/agents/` |
+| Scope | Path |
+|-------|------|
 | User | `~/.copilot/agents/` |
-| Organization | `{org}/.github/agents/` |
+| Project | `.github/agents/` |
+| Org | `{org}/.github/agents/` |
 
 ### Use Custom Agent
 
 ```bash
-# Explicit invocation
-copilot --agent frontend-expert "create login component"
+# Direct invocation
+copilot --agent security-expert "audit payment code"
 
-# Or use -t shorthand
-copilot -t frontend-expert "build dashboard"
+# Using @mention in fleet
+/fleet implement auth @test-writer create unit tests
 ```
 
-## Invocation Methods
+---
 
-### 1. Explicit Invocation
-```bash
-copilot /agent security-audit "check for vulnerabilities"
-copilot --agent docs-writer "generate API docs"
-```
+## Fleet + Custom Agents
 
-### 2. Inference (Automatic)
-Main agent automatically detects when to use a subagent based on:
-- Your prompt
-- Agent description in profile file
+### Specialization
+- Subagents can use **custom agents**
+- Each subtask gets best-suited agent
+- Example: @frontend, @backend, @tests
 
-### 3. Slash Commands
-```bash
-/fleet              # Parallel execution
-/agent <name>      # Use specific agent
-/plan               # Enter planning mode
-```
-
-## AGENTS.md for Project Context
-
-Create `AGENTS.md` in project root:
-
-```markdown
-# AGENTS.md
-
-## Project Context
-- **Tech Stack**: Node.js, React, PostgreSQL
-- **Testing**: Vitest, Playwright
-- **Code Style**: ESLint, Prettier
-
-## Team Conventions
-- Use TypeScript strict mode
-- Write tests for all new features
-- Follow conventional commits
-- Add JSDoc for complex functions
-
-## Custom Instructions
-- Frontend: Use React Server Components
-- Backend: Use Prisma ORM
-- API: REST with OpenAPI docs
-```
-
-## Orchestration Pattern
-
-### Multi-Agent Workflow
+### Model Selection
 
 ```bash
-# Task: Full feature implementation
-copilot "implement user authentication"
-
-# Copilot automatically:
-# 1. Plan (uses Plan agent)
-# 2. Delegate to backend agent (auth logic)
-# 3. Delegate to frontend agent (login UI)
-# 4. Delegate to test agent (coverage)
-# 5. Aggregate results
+# Use specific model for subtask
+Use GPT-5.3-Codex to create API
+Use Claude Opus 4.5 to analyze security
 ```
 
-### Sequential Delegation
+### Default Behavior
+- Subagents use **low-cost model** by default
+- Override with model specification
+
+---
+
+## When to Use /fleet
+
+### Best For
+- Large/complex tasks
+- Multiple independent steps
+- Parallelizable work (refactoring, tests, updates)
+- Automated workflows (autopilot mode)
+
+### Not For
+- Sequential tasks with dependencies
+- Simple one-step requests
+
+---
+
+## Important Considerations
+
+### Premium Requests
+- Each subagent LLM interaction = premium request
+- `/fleet` may use **more requests** than single agent
+- Use `/model` to check multiplier
+
+### Cost Optimization
+```bash
+# Check current model and cost
+/model
+
+# Use cheaper model for subagents
+/model gpt-4o-mini
+```
+
+### Task Composition
+- Best for **independent subtasks**
+- Sequential tasks won't benefit from /fleet
+
+---
+
+## Fleet + Autopilot
 
 ```bash
-# Agent 1: Creates feature
-PR=$(copilot "add user profile endpoint")
+# 1. Plan (Shift+Tab)
+# 2. Accept plan
 
-# Agent 2: Reviews
-copilot "review $PR"
+# Option A: Full autopilot
+Accept plan and build on autopilot + /fleet
 
-# Agent 3: Tests
-copilot "run integration tests on $PR"
+# Option B: Manual
+/fleet implement the plan
 ```
 
-## Single Command Workflow
+---
 
-```bash
-# One command to:
-# 1. Create branch
-# 2. Implement changes
-# 3. Run tests
-# 4. Open PR
-copilot pr "add password reset flow"
-```
+## Commands Reference
+
+| Command | Description |
+|---------|-------------|
+| `/fleet` | Run subtasks in parallel |
+| `/tasks` | List background tasks |
+| `/model` | Check/change model |
+| `/agent` | Use specific agent |
+| Shift+Tab | Enter plan mode |
+
+---
 
 ## Best Practices
 
-1. **Use Plan Mode** for complex tasks before execution
-2. **Create Custom Agents** for team conventions
-3. **Leverage Fleet** for parallel subtasks
-4. **Define AGENTS.md** for project context
-5. **Review Always** - AI can make mistakes
+1. **Use Plan Mode** first for complex tasks
+2. **Define custom agents** for team conventions
+3. **Leverage /fleet** for parallelizable work
+4. **Monitor with /tasks** for progress
+5. **Consider cost** - more subagents = more requests
+6. **Review output** - AI can make mistakes
+
+---
 
 ## Examples
 
 ```bash
-# Security audit
-copilot --agent security "audit payment code"
+# Full feature with tests and docs
+/fleet implement user auth, @test-writer add tests, @docs-writer update API docs
 
-# Documentation
-copilot -t docs-writer "generate SDK docs"
+# Multi-module refactor
+/fleet refactor auth-module, refactor payment-module, refactor user-module
 
-# Complex task with fleet
-/fleet "refactor auth system, add tests, update docs"
+# Security audit + fixes
+/fleet audit security, fix vulnerabilities
 
-# Quick fix
-copilot fix "memory leak in worker"
-
-# Full implementation
-copilot "build e-commerce checkout flow"
+# Quick parallel tasks
+/fleet update dependencies, run tests, build
 ```
 
-## Troubleshooting
+---
 
-```bash
-# Check agents
-copilot agents list
+## Documentation
 
-# Agent status
-copilot status
-
-# Clear context
-copilot reset
-
-# Debug mode
-copilot --verbose "your task"
-```
+- [Fleet Concept](https://docs.github.com/en/copilot/concepts/agents/copilot-cli/fleet)
+- [Speeding Up Tasks](https://docs.github.com/en/copilot/how-tos/copilot-cli/speeding-up-task-completion)
+- [Custom Agents](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/create-custom-agents-for-cli)
