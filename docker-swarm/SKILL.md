@@ -1,13 +1,6 @@
 ---
 name: docker-swarm
 description: Docker Swarm orchestration
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # docker-swarm
 

@@ -1,13 +1,6 @@
 ---
 name: graphql-resolvers
 description: GraphQL resolver patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # graphql-resolvers
 

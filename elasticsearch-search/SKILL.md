@@ -1,13 +1,6 @@
 ---
 name: elasticsearch-search
 description: Elasticsearch full-text search
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # elasticsearch-search
 

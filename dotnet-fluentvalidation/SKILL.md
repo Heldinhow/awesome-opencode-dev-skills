@@ -1,13 +1,6 @@
 ---
 name: dotnet-fluentvalidation
 description: FluentValidation for .NET. Use when validating input models, commands, DTOs, or needing declarative validation rules.
-metadata:
-  clawdbot:
-    emoji: "✅"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # FluentValidation for .NET
 

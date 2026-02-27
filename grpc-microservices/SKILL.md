@@ -1,13 +1,6 @@
 ---
 name: grpc-microservices
 description: gRPC microservices communication
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # grpc-microservices
 

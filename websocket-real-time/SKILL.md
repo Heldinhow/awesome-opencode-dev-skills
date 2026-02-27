@@ -1,13 +1,6 @@
 ---
 name: websocket-real-time
 description: WebSocket real-time communication
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # websocket-real-time
 

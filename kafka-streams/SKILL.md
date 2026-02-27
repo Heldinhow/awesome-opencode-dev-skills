@@ -1,13 +1,6 @@
 ---
 name: kafka-streams
 description: Apache Kafka streams processing
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # kafka-streams
 

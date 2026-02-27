@@ -1,13 +1,6 @@
 ---
 name: debugging
 description: Debugging patterns and strategies
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # debugging
 

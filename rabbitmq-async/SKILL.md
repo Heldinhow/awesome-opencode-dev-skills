@@ -1,13 +1,6 @@
 ---
 name: rabbitmq-async
 description: RabbitMQ async messaging
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # rabbitmq-async
 

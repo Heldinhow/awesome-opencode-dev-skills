@@ -1,12 +1,6 @@
 ---
 name: superpowers-patterns
 description: Core patterns from superpowers library - TDD, debugging, and collaboration
-metadata:
-  clawdbot:
-    emoji: "⚡"
-    requires:
-      tools: [exec]
----
 
 # Superpowers Patterns
 

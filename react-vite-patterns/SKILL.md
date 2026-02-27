@@ -1,13 +1,6 @@
 ---
 name: react-vite-patterns
 description: React + Vite best practices
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # react-vite-patterns
 

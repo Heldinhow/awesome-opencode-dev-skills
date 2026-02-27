@@ -1,13 +1,6 @@
 ---
 name: github-actions-ci
 description: GitHub Actions CI/CD workflows
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # github-actions-ci
 

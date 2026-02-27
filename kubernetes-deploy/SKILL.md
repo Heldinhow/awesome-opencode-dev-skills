@@ -1,13 +1,6 @@
 ---
 name: kubernetes-deploy
 description: Kubernetes deployment patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # kubernetes-deploy
 

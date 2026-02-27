@@ -1,13 +1,6 @@
 ---
 name: api-best-practices
 description: REST API design patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # api-best-practices
 

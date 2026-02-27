@@ -1,13 +1,6 @@
 ---
 name: typescript-patterns
 description: TypeScript design patterns and idioms
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # typescript-patterns
 

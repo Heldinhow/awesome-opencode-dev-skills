@@ -1,12 +1,6 @@
 ---
 name: dispatching-parallel-agents
 description: Use when you need to run multiple independent tasks in parallel using OpenClaw sub-agents. Spawns separate sessions for each task and aggregates results.
-metadata:
-  clawdbot:
-    emoji: "🚀"
-    requires:
-      tools: [sessions_spawn, sessions_list]
----
 
 # Dispatching Parallel Agents (OpenClaw)
 

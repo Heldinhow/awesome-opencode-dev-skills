@@ -1,13 +1,6 @@
 ---
 name: dotnet-mediatr
 description: MediatR library for .NET. Use when implementing mediator pattern, CQRS, or needing to decouple request handling from controllers.
-metadata:
-  clawdbot:
-    emoji: "📬"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # MediatR Pattern for .NET
 

@@ -1,13 +1,6 @@
 ---
 name: dotnet-clean-architecture
 description: Clean Architecture for .NET. Use when building maintainable, testable, and scalable applications with proper layer separation.
-metadata:
-  clawdbot:
-    emoji: "🏗️"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # Clean Architecture for .NET
 

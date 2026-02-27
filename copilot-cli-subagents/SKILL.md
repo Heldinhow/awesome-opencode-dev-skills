@@ -1,13 +1,6 @@
 ---
 name: copilot-cli-subagents
 description: GitHub Copilot CLI with /fleet parallel execution, subagent orchestration, custom agents, and multi-agent workflows.
-metadata:
-  clawdbot:
-    emoji: "🤖"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # GitHub Copilot CLI - Fleet & Subagents
 

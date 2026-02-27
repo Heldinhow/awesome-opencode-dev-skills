@@ -1,13 +1,6 @@
 ---
 name: TDD
 description: Test-driven development patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # TDD
 

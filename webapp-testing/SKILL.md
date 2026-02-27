@@ -1,13 +1,6 @@
 ---
 name: webapp-testing
 description: Test web apps with Playwright
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # webapp-testing
 

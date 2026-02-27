@@ -1,13 +1,6 @@
 ---
 name: skill-creator
 description: Create new skills interactively
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # skill-creator
 

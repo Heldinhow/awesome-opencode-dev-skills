@@ -1,13 +1,6 @@
 ---
 name: internal-comms
 description: A set of resources to help write all kinds of internal communications, using the formats that the company likes to use. Use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
-metadata:
-  clawdbot:
-    emoji: "📢"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 ## When to use this skill
 To write internal communications, use this skill for:

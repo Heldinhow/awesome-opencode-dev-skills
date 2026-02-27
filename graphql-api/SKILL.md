@@ -1,13 +1,6 @@
 ---
 name: graphql-api
 description: GraphQL API design patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # graphql-api
 

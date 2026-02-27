@@ -1,13 +1,6 @@
 ---
 name: security-audit
 description: Security vulnerability scanning
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # security-audit
 

@@ -1,13 +1,6 @@
 ---
 name: database-migrations
 description: Database migration patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # database-migrations
 

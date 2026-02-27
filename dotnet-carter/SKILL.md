@@ -1,13 +1,6 @@
 ---
 name: dotnet-carter
 description: Carter for .NET. Use when building minimal APIs with declarative routing, route grouping, and clean endpoint definitions.
-metadata:
-  clawdbot:
-    emoji: "🛣️"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # Carter for .NET
 

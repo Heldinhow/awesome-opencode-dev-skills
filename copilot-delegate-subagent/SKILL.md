@@ -1,12 +1,6 @@
 ---
 name: copilot-delegate-subagent
 description: Orchestrate and delegate tasks to subagents in GitHub Copilot CLI. Use when you need to offload work to specialized subagents for parallel or focused execution.
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
 ---
 
 # Copilot CLI - Delegating to Subagents

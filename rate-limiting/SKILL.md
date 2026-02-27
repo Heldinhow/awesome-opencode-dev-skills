@@ -1,13 +1,6 @@
 ---
 name: rate-limiting
 description: API rate limiting strategies
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # rate-limiting
 

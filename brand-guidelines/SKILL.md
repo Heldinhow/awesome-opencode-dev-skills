@@ -1,13 +1,6 @@
 ---
 name: brand-guidelines
 description: Applies official brand colors and typography to any sort of artifact that may benefit from having a cohesive look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
-metadata:
-  clawdbot:
-    emoji: "🎨"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # Brand Styling
 

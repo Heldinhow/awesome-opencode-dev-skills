@@ -1,13 +1,6 @@
 ---
 name: terraform-iac
 description: Terraform infrastructure as code
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # terraform-iac
 

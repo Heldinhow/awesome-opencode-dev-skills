@@ -1,13 +1,6 @@
 ---
 name: web-artifacts-builder
 description: Build complex HTML artifacts using React, Tailwind CSS, and shadcn/ui components
-metadata:
-  clawdbot:
-    emoji: "🎨"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # Web Artifacts Builder
 

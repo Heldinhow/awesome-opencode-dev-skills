@@ -1,13 +1,6 @@
 ---
 name: redis-cache
 description: Redis caching strategies
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # redis-cache
 

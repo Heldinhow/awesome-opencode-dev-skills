@@ -1,13 +1,6 @@
 ---
 name: jwt-auth
 description: JWT authentication patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # jwt-auth
 

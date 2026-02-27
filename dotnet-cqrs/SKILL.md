@@ -1,13 +1,6 @@
 ---
 name: dotnet-cqrs
 description: CQRS (Command Query Responsibility Segregation) pattern for .NET. Use when implementing separated read/write operations, command handlers, query handlers, or needing scalable architecture.
-metadata:
-  clawdbot:
-    emoji: "⚡"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # CQRS Pattern for .NET
 

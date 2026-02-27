@@ -1,13 +1,6 @@
 ---
 name: aws-lambda
 description: AWS Lambda serverless patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
 
 # aws-lambda
 
