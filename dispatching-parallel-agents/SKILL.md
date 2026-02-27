@@ -1,8 +1,11 @@
 ---
 name: dispatching-parallel-agents
-description: Use when you need to run multiple independent tasks in parallel using OpenClaw sub-agents. Spawns separate sessions for each task and aggregates results.
+description: Run multiple independent tasks in parallel. Spawns separate processes for each task and aggregates results.
+---
 
-# Dispatching Parallel Agents (OpenClaw)
+# Dispatching Parallel Agents
+
+Run multiple independent tasks in parallel for faster execution.
 
 ## Overview
 
@@ -38,101 +41,52 @@ Task C: Update tests
 
 ### 2. Spawn Parallel Agents
 
-Use `sessions_spawn` to run multiple agents:
-
+Use parallel execution:
 ```bash
-# Spawn 3 agents in parallel
-sessions_spawn(task="Fix the login bug in src/auth/login.ts", label="fix-login")
-sessions_spawn(task="Add search feature to src/search/", label="add-search")
-sessions_spawn(task="Update tests in tests/", label="update-tests")
+# Run 3 tasks in parallel
+task1 &
+task2 &
+task3
+wait
 ```
 
 ### 3. Wait for Results
 
-Each sub-agent runs independently and returns when complete.
+Each task runs independently and returns when complete.
 
 ### 4. Aggregate Results
 
 Review each result and integrate the changes.
 
-## Agent Prompt Structure
+## Good Prompts
 
-Good prompts are:
+**Bad:**
+```
+Fix everything
+```
 
-1. **Focused** - One clear task
-2. **Self-contained** - All context needed
-3. **Specific output** - What to return
+**Good:**
+```
+Fix login tests
 
-```markdown
-Task: Fix the 3 failing tests in tests/auth.test.ts
-
-1. "should login with valid credentials" - returns 401 instead of 200
+1. "should login with valid credentials" - returns 401
 2. "should logout properly" - session not cleared
-3. "should handle invalid password" - wrong error message
 
 Your task:
-1. Read the test file and understand what's expected
-2. Find root cause in src/auth/
+1. Read the test file
+2. Find root cause
 3. Fix the bugs
-4. Run tests to verify
 
-Return: Summary of what you found and fixed.
-```
-
-## Usage in OpenClaw
-
-### Basic Parallel Spawn
-
-```
-You can use me to spawn multiple sub-agents for parallel execution.
-
-Example: "Fix all 3 failing tests in parallel"
-```
-
-The main agent will:
-1. Identify independent tasks
-2. Spawn sub-agents with `sessions_spawn`
-3. Wait for completion
-4. Aggregate results
-
-### Configuration
-
-Sub-agents can be configured:
-```json
-{
-  "model": "minimax-portal/MiniMax-M2.5",
-  "timeoutSeconds": 300,
-  "cleanup": "delete"
-}
+Return: Summary of fixes.
 ```
 
 ## Common Mistakes
 
-❌ **Too broad:** "Fix everything" - agent gets lost
-✅ **Specific:** "Fix login tests" - focused scope
+❌ **Too broad:** "Fix everything" - gets lost
+✅ **Specific:** "Fix login tests" - focused
 
 ❌ **No context:** "Fix the bug" - doesn't know where
-✅ **Context:** "Error in src/auth/login.ts line 42"
-
-❌ **No constraints:** Agent might change unrelated code
-✅ **Constraints:** "Fix tests only, don't change production code"
-
-## Real Example
-
-**Scenario:** 3 independent fixes needed
-
-```
-Task 1 → sessions_spawn(task="Fix CORS in server.ts", label="fix-cors")
-Task 2 → sessions_spawn(task="Add validation to user model", label="add-validation")
-Task 3 → sessions_spawn(task="Update README with new API", label="update-docs")
-```
-
-**Results:**
-- fix-cors: Added cors middleware
-- add-validation: Added Joi schema
-- update-docs: Added new endpoints
-
-All ran in parallel, saved ~67% time.
+✅ **Context:** "Error in auth/login.ts line 42"
 
 ## Key Principles
 

@@ -1,12 +1,5 @@
 {
   "name": "dispatching-parallel-agents",
   "version": "1.0.0",
-  "description": "Dispatch multiple independent tasks to parallel sub-agents in OpenClaw",
-  "triggers": [
-    "parallel",
-    "multiple agents",
-    "spawn",
-    "concurrent",
-    "run in parallel"
-  ]
+  "description": "Run multiple independent tasks in parallel"
 }
