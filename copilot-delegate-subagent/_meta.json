@@ -1,0 +1,5 @@
+{
+  "name": "copilot-delegate-subagent",
+  "version": "1.0.0",
+  "description": "Orchestrate and delegate tasks to subagents in GitHub Copilot CLI"
+}
