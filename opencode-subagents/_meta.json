@@ -1,0 +1,5 @@
+{
+  "name": "opencode-subagents",
+  "version": "1.0.0",
+  "description": "OpenCode subagent patterns - create specialized subagents with clean context"
+}
