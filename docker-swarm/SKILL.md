@@ -1,20 +1,24 @@
-{
-  "title": "docker-swarm",
-  "description": "Orchestrate containerized applications using Docker Swarm for clustering and service management.",
-  "trigger": "When you need to deploy and manage containers across multiple hosts",
-  "input": "Dockerfile, service definitions, swarm configuration",
-  "steps": [
-    "Initialize Docker Swarm cluster",
-    "Create overlay network for service communication",
-    "Define services in docker-compose.yml",
-    "Deploy services with docker stack deploy",
-    "Scale services and manage replicas"
-  ],
-  "output": "Running containerized services managed by Docker Swarm",
-  "use_cases": [
-    "Multi-container application deployment",
-    "Service scaling and load balancing",
-    "Container orchestration without Kubernetes"
-  ],
-  "limitations": "Less feature-rich than Kubernetes; not ideal for complex microservice architectures"
-}
+---
+name: docker-swarm
+description: "Orchestrate containerized applications using Docker Swarm for clustering and service management."
+---
+
+# docker-swarm
+
+## Overview
+When you need to deploy and manage containers across multiple hosts
+
+## Process
+1. Initialize Docker Swarm cluster
+2. Create overlay network for service communication
+3. Define services in docker-compose.yml
+4. Deploy services with docker stack deploy
+5. Scale services and manage replicas
+
+## Examples
+- Multi-container application deployment
+- Service scaling and load balancing
+- Container orchestration without Kubernetes
+
+## Limitations
+Less feature-rich than Kubernetes; not ideal for complex microservice architectures
