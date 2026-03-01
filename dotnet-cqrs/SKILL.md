@@ -1,20 +1,24 @@
-{
-  "title": "dotnet-cqrs",
-  "description": "Implement CQRS (Command Query Responsibility Segregation) pattern in .NET for separated read/write operations.",
-  "trigger": "When you need scalable architectures with different models for reads and writes",
-  "input": "Domain entities, command/query definitions, MediatR library",
-  "steps": [
-    "Define separate command and query objects",
-    "Implement command handlers for write operations",
-    "Implement query handlers for read operations",
-    "Use MediatR for decoupling",
-    "Return DTOs from queries, entities from commands"
-  ],
-  "output": "CQRS implementation with separated command and query handling",
-  "use_cases": [
-    "Scalable APIs with different read/write models",
-    "Event sourcing architectures",
-    "Complex business logic separation"
-  ],
-  "limitations": "Overkill for simple CRUD applications"
-}
+---
+name: dotnet-cqrs
+description: "Implement CQRS (Command Query Responsibility Segregation) pattern in .NET for separated read/write operations."
+---
+
+# dotnet-cqrs
+
+## Overview
+When you need scalable architectures with different models for reads and writes
+
+## Process
+1. Define separate command and query objects
+2. Implement command handlers for write operations
+3. Implement query handlers for read operations
+4. Use MediatR for decoupling
+5. Return DTOs from queries, entities from commands
+
+## Examples
+- Scalable APIs with different read/write models
+- Event sourcing architectures
+- Complex business logic separation
+
+## Limitations
+Overkill for simple CRUD applications
