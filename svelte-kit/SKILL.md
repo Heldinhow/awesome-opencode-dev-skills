@@ -1,28 +1,20 @@
----
-name: svelte-kit
-description: SvelteKit full-stack patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# svelte-kit
-
-SvelteKit full-stack patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need SvelteKit full-stack patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "svelte-kit",
+  "description": "Build full-stack web applications using SvelteKit with server-side rendering.",
+  "trigger": "When you need to create modern web apps with SvelteKit",
+  "input": "Svelte components, route definitions, server endpoints",
+  "steps": [
+    "Initialize SvelteKit project",
+    "Create page and layout components",
+    "Set up API routes (server endpoints)",
+    "Configure SSR and hydration",
+    "Deploy to production adapter"
+  ],
+  "output": "Full-stack SvelteKit application with SSR",
+  "use_cases": [
+    "Building SSR web applications",
+    "Creating hybrid static/server-rendered sites",
+    "Full-stack JavaScript development"
+  ],
+  "limitations": "Smaller ecosystem than React; some SSR-specific considerations"
+}
