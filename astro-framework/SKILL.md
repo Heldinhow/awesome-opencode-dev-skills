@@ -1,28 +1,20 @@
----
-name: astro-framework
-description: Astro web framework
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# astro-framework
-
-Astro web framework
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Astro web framework
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "astro-framework",
+  "description": "Build content-focused websites using Astro framework with partial hydration.",
+  "trigger": "When building content-heavy websites requiring optimal performance",
+  "input": "Astro project setup, components, content collections",
+  "steps": [
+    "Initialize Astro project",
+    "Create pages and layouts",
+    "Set up content collections",
+    "Add framework components (React, Vue, Svelte)",
+    "Configure SSR or static output"
+  ],
+  "output": "Fast Astro website or webapp",
+  "use_cases": [
+    "Static sites with dynamic components",
+    "Content-focused websites",
+    "Performance-critical web apps"
+  ],
+  "limitations": "Less suited for complex client-side apps"
+}
