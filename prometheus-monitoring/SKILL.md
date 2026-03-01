@@ -1,20 +1,24 @@
-{
-  "title": "prometheus-monitoring",
-  "description": "Implement Prometheus metrics and monitoring for applications.",
-  "trigger": "When you need to collect and expose application metrics",
-  "input": "Metric definitions, endpoint configuration, scrape targets",
-  "steps": [
-    "Add Prometheus client library",
-    "Define metrics (counters, gauges, histograms)",
-    "Expose /metrics endpoint",
-    "Configure Prometheus to scrape metrics",
-    "Create alerts and dashboards"
-  ],
-  "output": "Application with exposed Prometheus metrics",
-  "use_cases": [
-    "Application performance monitoring",
-    "Infrastructure metrics",
-    "Custom business metrics"
-  ],
-  "limitations": "Requires Prometheus infrastructure; additional overhead"
-}
+---
+name: prometheus-monitoring
+description: "Implement Prometheus metrics and monitoring for applications."
+---
+
+# prometheus-monitoring
+
+## Overview
+When you need to collect and expose application metrics
+
+## Process
+1. Add Prometheus client library
+2. Define metrics (counters, gauges, histograms)
+3. Expose /metrics endpoint
+4. Configure Prometheus to scrape metrics
+5. Create alerts and dashboards
+
+## Examples
+- Application performance monitoring
+- Infrastructure metrics
+- Custom business metrics
+
+## Limitations
+Requires Prometheus infrastructure; additional overhead
