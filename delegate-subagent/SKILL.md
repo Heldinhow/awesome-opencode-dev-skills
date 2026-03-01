@@ -1,55 +1,20 @@
----
-name: delegate-subagent
-description: Delegate tasks to a single subagent for focused execution.
----
-
-# Delegate to Subagent
-
-Delegate a specific task to a subagent for focused execution.
-
-## Overview
-
-Instead of doing everything yourself, delegate a focused task to a specialized subagent.
-
-## When to Use
-
-- When a task needs focused attention
-- When you need specialized knowledge
-- When task is independent
-- To keep your context clean
-
-## Basic Delegation
-
-```bash
-# Delegate to subagent
-delegate "task description"
-```
-
-## Patterns
-
-### 1. Direct Delegation
-
-```bash
-delegate "Create user authentication"
-```
-
-### 2. With Context
-
-```bash
-delegate "Add tests for auth module" with context from tests/
-```
-
-### 3. Sequential Delegation
-
-```bash
-delegate "Create API"
-delegate "Add tests"
-delegate "Write docs"
-```
-
-## Best Practices
-
-1. **Clear task** - Be specific about what you want
-2. **Provide context** - Give relevant files/info
-3. **Review result** - Always check the output
-4. **Iterate** - Refine if needed
+{
+  "title": "delegate-subagent",
+  "description": "Delegate focused tasks to a subagent for specialized execution while maintaining main context.",
+  "trigger": "When a task needs focused attention, specialized knowledge, or independent execution",
+  "input": "Task description, relevant context files, expected output format",
+  "steps": [
+    "Identify independent task suitable for delegation",
+    "Provide clear task description with context",
+    "Invoke subagent execution",
+    "Review returned results",
+    "Integrate changes into main workflow"
+  ],
+  "output": "Completed subagent task result ready for integration",
+  "use_cases": [
+    "Running focused refactoring in isolation",
+    "Executing specialized tasks (tests, docs, migrations)",
+    "Parallel independent work items"
+  ],
+  "limitations": "Not suitable for tasks requiring main context or real-time collaboration"
+}
