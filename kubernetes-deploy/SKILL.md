@@ -1,21 +1,20 @@
----
-name: kubernetes-deploy
-description: Kubernetes deployment patterns
-
-# kubernetes-deploy
-
-Kubernetes deployment patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Kubernetes deployment patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "kubernetes-deploy",
+  "description": "Deploy and manage applications on Kubernetes clusters.",
+  "trigger": "When you need to deploy containerized applications to Kubernetes",
+  "input": "Container images, deployment manifests, Kubernetes configuration",
+  "steps": [
+    "Create Docker container image",
+    "Define Kubernetes manifests (Deployment, Service, etc.)",
+    "Apply manifests to cluster",
+    "Configure ingress for external access",
+    "Monitor deployment and scale as needed"
+  ],
+  "output": "Running application on Kubernetes cluster",
+  "use_cases": [
+    "Container orchestration",
+    "Microservices deployment",
+    "Auto-scaling applications"
+  ],
+  "limitations": "Requires Kubernetes cluster; steep learning curve"
+}
