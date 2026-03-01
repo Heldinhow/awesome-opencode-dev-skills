@@ -1,28 +1,20 @@
----
-name: supabase-backend
-description: Supabase backend patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# supabase-backend
-
-Supabase backend patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Supabase backend patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "supabase-backend",
+  "description": "Build backend services using Supabase for database, auth, and real-time features.",
+  "trigger": "When you need quick backend with database, auth, and real-time",
+  "input": "Database schema, Supabase project credentials",
+  "steps": [
+    "Set up Supabase project",
+    "Define database tables and relationships",
+    "Configure Row Level Security policies",
+    "Set up authentication",
+    "Implement real-time subscriptions"
+  ],
+  "output": "Backend with database, auth, and real-time",
+  "use_cases": [
+    "Quick backend prototyping",
+    "SaaS application backends",
+    "Real-time applications"
+  ],
+  "limitations": "Vendor lock-in; limited to Supabase features"
+}
