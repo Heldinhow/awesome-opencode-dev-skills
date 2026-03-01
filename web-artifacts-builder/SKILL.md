@@ -1,50 +1,20 @@
----
-name: web-artifacts-builder
-description: Build complex HTML artifacts using React, Tailwind CSS, and shadcn/ui components
-
-# Web Artifacts Builder
-
-Build production-quality HTML artifacts using React, Tailwind CSS, and shadcn/ui components.
-
-## When to Use
-
-- Building interactive web UIs as standalone artifacts
-- Creating dashboards, forms, data visualizations
-- Rapid prototyping with modern stack
-- Single-page interactive experiences
-
-## Stack
-
-- React 18+
-- Tailwind CSS
-- shadcn/ui components
-- Radix UI primitives
-
-## Structure
-
-```tsx
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-
-export default function App() {
-  const [count, setCount] = useState(0)
-  
-  return (
-    <Card>
-      <h1>Counter: {count}</h1>
-      <Button onClick={() => setCount(c => c + 1)}>
-        Increment
-      </Button>
-    </Card>
-  )
+{
+  "title": "web-artifacts-builder",
+  "description": "Build production-quality HTML artifacts using React, Tailwind CSS, and shadcn/ui.",
+  "trigger": "When building interactive web UIs as standalone artifacts",
+  "input": "React components, UI requirements, interactive features",
+  "steps": [
+    "Set up React with Tailwind and shadcn/ui",
+    "Build interactive components",
+    "Implement accessibility (ARIA)",
+    "Add responsive design",
+    "Export as self-contained HTML"
+  ],
+  "output": "Interactive HTML artifact with React",
+  "use_cases": [
+    "Creating dashboards",
+    "Building interactive prototypes",
+    "Single-page UI experiences"
+  ],
+  "limitations": "Limited to client-side functionality"
 }
-```
-
-## Best Practices
-
-1. Use shadcn/ui components for consistency
-2. Implement proper accessibility (ARIA)
-3. Responsive design with Tailwind
-4. TypeScript for type safety
-5. Export as self-contained HTML
