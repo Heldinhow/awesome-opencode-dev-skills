@@ -1,32 +1,20 @@
----
-name: superpowers-patterns
-description: Core patterns from superpowers library - TDD, debugging, and collaboration
-
-# Superpowers Patterns
-
-Battle-tested patterns from the superpowers library.
-
-## TDD Workflow
-
-1. Write failing test first
-2. Write minimal code to pass
-3. Refactor
-
-## Debugging Pattern
-
-1. Reproduce the bug
-2. Isolate the cause
-3. Fix and verify
-4. Add regression test
-
-## Collaboration
-
-- /brainstorm - Start brainstorming session
-- /write-plan - Create execution plan  
-- /execute-plan - Execute planned tasks
-
-## Commands
-
-- Use structured prompts
-- Break down complex tasks
-- Verify each step
+{
+  "title": "superpowers-patterns",
+  "description": "Apply core patterns from superpowers library for TDD, debugging, and collaboration.",
+  "trigger": "When you need battle-tested development patterns and collaboration workflows",
+  "input": "Task description, current code state, collaboration needs",
+  "steps": [
+    "For TDD: Write failing test first, then minimal code, then refactor",
+    "For debugging: Reproduce, isolate, fix, add regression test",
+    "Use /brainstorm for ideation",
+    "Use /write-plan for planning",
+    "Use /execute-plan for execution"
+  ],
+  "output": "Improved code with patterns applied",
+  "use_cases": [
+    "Test-driven development",
+    "Bug fixing and debugging",
+    "Team collaboration workflows"
+  ],
+  "limitations": "Requires discipline to follow patterns consistently"
+}
