@@ -1,21 +1,20 @@
----
-name: rabbitmq-async
-description: RabbitMQ async messaging
-
-# rabbitmq-async
-
-RabbitMQ async messaging
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need RabbitMQ async messaging
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "rabbitmq-async",
+  "description": "Implement asynchronous messaging using RabbitMQ for distributed systems.",
+  "trigger": "When building async message-based systems",
+  "input": "RabbitMQ connection, message format, queue definitions",
+  "steps": [
+    "Set up RabbitMQ connection",
+    "Define exchanges and queues",
+    "Implement publishers",
+    "Implement consumers",
+    "Handle message acknowledgments"
+  ],
+  "output": "Async messaging system with RabbitMQ",
+  "use_cases": [
+    "Decoupled service communication",
+    "Task queues",
+    "Event-driven architectures"
+  ],
+  "limitations": "Requires RabbitMQ infrastructure; message ordering challenges"
+}
