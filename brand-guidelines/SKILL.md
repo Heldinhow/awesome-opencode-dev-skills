@@ -1,71 +1,20 @@
----
-name: brand-guidelines
-description: Applies official brand colors and typography to any sort of artifact that may benefit from having a cohesive look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.
-
-# Brand Styling
-
-## Overview
-
-To access official brand identity and style resources, use this skill.
-
-**Keywords**: branding, corporate identity, visual identity, post-processing, styling, brand colors, typography, visual formatting, visual design
-
-## Brand Guidelines
-
-### Colors
-
-**Main Colors:**
-
-- Dark: `#141413` - Primary text and dark backgrounds
-- Light: `#faf9f5` - Light backgrounds and text on dark
-- Mid Gray: `#b0aea5` - Secondary elements
-- Light Gray: `#e8e6dc` - Subtle backgrounds
-
-**Accent Colors:**
-
-- Orange: `#d97757` - Primary accent
-- Blue: `#6a9bcc` - Secondary accent
-- Green: `#788c5d` - Tertiary accent
-
-### Typography
-
-- **Headings**: Poppins (with Arial fallback)
-- **Body Text**: Lora (with Georgia fallback)
-- **Note**: Fonts should be pre-installed in your environment for best results
-
-## Features
-
-### Smart Font Application
-
-- Applies Poppins font to headings (24pt and larger)
-- Applies Lora font to body text
-- Automatically falls back to Arial/Georgia if custom fonts unavailable
-- Preserves readability across all systems
-
-### Text Styling
-
-- Headings (24pt+): Poppins font
-- Body text: Lora font
-- Smart color selection based on background
-- Preserves text hierarchy and formatting
-
-### Shape and Accent Colors
-
-- Non-text shapes use accent colors
-- Cycles through orange, blue, and green accents
-- Maintains visual interest while staying on-brand
-
-## Technical Details
-
-### Font Management
-
-- Uses system-installed Poppins and Lora fonts when available
-- Provides automatic fallback to Arial (headings) and Georgia (body)
-- No font installation required - works with existing system fonts
-- For best results, pre-install Poppins and Lora fonts in your environment
-
-### Color Application
-
-- Uses RGB color values for precise brand matching
-- Applied via python-pptx's RGBColor class
-- Maintains color fidelity across different systems
+{
+  "title": "brand-guidelines",
+  "description": "Apply official brand colors and typography to artifacts for cohesive visual identity.",
+  "trigger": "When brand colors, typography, or company design standards apply",
+  "input": "Brand color codes, typography specifications, target artifact",
+  "steps": [
+    "Identify brand colors from guidelines",
+    "Apply main colors (dark, light, gray)",
+    "Use accent colors for shapes and highlights",
+    "Apply typography (Poppins for headings, Lora for body)",
+    "Ensure color contrast and readability"
+  ],
+  "output": "Branded artifact with consistent visual identity",
+  "use_cases": [
+    "Creating branded presentations",
+    "Applying company style to documents",
+    "Visual content with consistent branding"
+  ],
+  "limitations": "Requires brand guidelines; limited customization"
+}
