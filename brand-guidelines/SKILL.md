@@ -1,20 +1,24 @@
-{
-  "title": "brand-guidelines",
-  "description": "Apply official brand colors and typography to artifacts for cohesive visual identity.",
-  "trigger": "When brand colors, typography, or company design standards apply",
-  "input": "Brand color codes, typography specifications, target artifact",
-  "steps": [
-    "Identify brand colors from guidelines",
-    "Apply main colors (dark, light, gray)",
-    "Use accent colors for shapes and highlights",
-    "Apply typography (Poppins for headings, Lora for body)",
-    "Ensure color contrast and readability"
-  ],
-  "output": "Branded artifact with consistent visual identity",
-  "use_cases": [
-    "Creating branded presentations",
-    "Applying company style to documents",
-    "Visual content with consistent branding"
-  ],
-  "limitations": "Requires brand guidelines; limited customization"
-}
+---
+name: brand-guidelines
+description: "Apply official brand colors and typography to artifacts for cohesive visual identity."
+---
+
+# brand-guidelines
+
+## Overview
+When brand colors, typography, or company design standards apply
+
+## Process
+1. Identify brand colors from guidelines
+2. Apply main colors (dark, light, gray)
+3. Use accent colors for shapes and highlights
+4. Apply typography (Poppins for headings, Lora for body)
+5. Ensure color contrast and readability
+
+## Examples
+- Creating branded presentations
+- Applying company style to documents
+- Visual content with consistent branding
+
+## Limitations
+Requires brand guidelines; limited customization
