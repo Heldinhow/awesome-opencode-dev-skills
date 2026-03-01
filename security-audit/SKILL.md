@@ -3,22 +3,40 @@ name: security-audit
 description: "Perform security vulnerability scanning and audits to identify and fix security issues."
 ---
 
-# security-audit
+# Security Audit
 
 ## Overview
-When you need to assess application security or before deploying to production
+Security auditing identifies vulnerabilities and security issues in applications. This skill should be invoked when assessing application security, before production deployment, or for compliance requirements.
 
-## Process
-1. Run dependency vulnerability scanners
-2. Check for common vulnerabilities (SQL injection, XSS, CSRF)
-3. Review authentication and authorization mechanisms
-4. Analyze configuration for security issues
-5. Generate security report with remediation steps
+## Core Principles
+- **Defense in Depth**: Multiple layers of security
+- **Least Privilege**: Minimal permissions required
+- **Dependency Scanning**: Check for vulnerable libraries
+- **OWASP**: Focus on common vulnerability classes
 
-## Examples
-- Pre-deployment security checks
-- Identifying vulnerable dependencies
-- Compliance auditing
+## Preparation Checklist
+- [ ] Choose security tools
+- [ ] Define audit scope
+- [ ] Gather application architecture
+- [ ] Review authentication flow
 
-## Limitations
-Automated scans may miss business logic vulnerabilities
+## Step-by-Step Process
+1. **Scan Dependencies**: Run npm audit, OWASP dependency check
+2. **Check OWASP**: Test for injection, XSS, CSRF
+3. **Review Auth**: Analyze authentication/authorization
+4. **Analyze Config**: Check security configurations
+5. **Report**: Document findings and remediation
+
+## Do's and Don'ts
+- ✅ **Do** scan dependencies regularly
+- ✅ **Do** test for OWASP Top 10
+- ✅ **Do** review authentication flow
+- ❌ **Don't** ignore scanner warnings
+- ❌ **Don't** skip manual review
+- ❌ **Don't** delay remediation
+
+## Anti-Patterns
+- **No Scanning**: Not checking dependencies
+- **Ignoring Warnings**: Not fixing scan results
+- **Single Layer**: Relying on only one security measure
+- **No Documentation**: Not documenting findings

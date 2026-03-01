@@ -3,22 +3,41 @@ name: prometheus-monitoring
 description: "Implement Prometheus metrics and monitoring for applications."
 ---
 
-# prometheus-monitoring
+# Prometheus Monitoring
 
 ## Overview
-When you need to collect and expose application metrics
+Prometheus provides metrics collection and alerting for comprehensive application monitoring. This skill should be invoked when collecting application metrics, monitoring performance, or setting up observability.
 
-## Process
-1. Add Prometheus client library
-2. Define metrics (counters, gauges, histograms)
-3. Expose /metrics endpoint
-4. Configure Prometheus to scrape metrics
-5. Create alerts and dashboards
+## Core Principles
+- **Metric Types**: Counters, Gauges, Histograms, Summaries
+- **Pull Model**: Prometheus scrapes /metrics endpoints
+- **Labels**: Use labels for dimensional data
+- **Alerts**: Define alert rules for anomalies
 
-## Examples
-- Application performance monitoring
-- Infrastructure metrics
-- Custom business metrics
+## Preparation Checklist
+- [ ] Set up Prometheus server
+- [ ] Choose client library for your language
+- [ ] Plan metrics and labels
+- [ ] Design alerting rules
 
-## Limitations
-Requires Prometheus infrastructure; additional overhead
+## Step-by-Step Process
+1. **Add Library**: Install Prometheus client
+2. **Define Metrics**: Create counters, gauges, histograms
+3. **Expose**: Implement /metrics endpoint
+4. **Configure**: Set up Prometheus scrape config
+5. **Visualize**: Create Grafana dashboards
+6. **Alert**: Define alerting rules
+
+## Do's and Don'ts
+- ✅ **Do** use appropriate metric types
+- ✅ **Do** add meaningful labels
+- ✅ **Do** set appropriate histogram buckets
+- ❌ **Don't** use high-cardinality labels
+- ❌ **Don't** expose sensitive data
+- ❌ **Don't** forget to instrument code
+
+## Anti-Patterns
+- **Cardinality Explosion**: Too many label values
+- **Missing Metrics**: Not instrumenting critical paths
+- **No Alerts**: Setting up Prometheus without alerting
+- **Sensitive Exposure**: Exposing internal metrics

@@ -3,22 +3,41 @@ name: docx
 description: "Create, read, edit, and manipulate Word documents (.docx) with proper formatting."
 ---
 
-# docx
+# Word Document Processing
 
 ## Overview
-When user requests Word documents, reports, letters, or .docx file manipulation
+Word document processing involves creating, reading, editing, and manipulating .docx files programmatically. This skill should be invoked when generating Word documents, reports, letters, or any document that requires proper formatting and structure.
 
-## Process
-1. Create new document using docx-js library
-2. Add content with proper styles (headings, paragraphs, tables)
-3. Handle special elements (images, hyperlinks, page breaks)
-4. Validate and fix XML issues
-5. Pack into final .docx file
+## Core Principles
+- **Library Selection**: Use python-docx for Python or docx-js for JavaScript
+- **Structure First**: Build document structure before content
+- **Style Consistency**: Use consistent styles throughout
+- **XML Understanding**: Understand .docx is ZIP of XML files
 
-## Examples
-- Creating professional reports
-- Editing existing Word documents
-- Generating letters and memos
+## Preparation Checklist
+- [ ] Choose library (python-docx, docx-js, docx4j)
+- [ ] Identify document structure (headings, paragraphs, tables)
+- [ ] Plan styling requirements
+- [ ] Handle special elements (images, headers, footers)
 
-## Limitations
-Complex formatting may require XML manipulation
+## Step-by-Step Process
+1. **Create**: Initialize new document object
+2. **Structure**: Add headings and section breaks
+3. **Content**: Add paragraphs with proper styles
+4. **Elements**: Insert tables, images, hyperlinks as needed
+5. **Validate**: Check XML structure validity
+6. **Save**: Write to .docx file
+
+## Do's and Don'ts
+- ✅ **Do** use styles instead of direct formatting
+- ✅ **Do** use proper heading hierarchy
+- ✅ **Do** validate documents after creation
+- ❌ **Don't** skip error handling for corrupted files
+- ❌ **Don't** assume complex formatting works automatically
+- ❌ **Don't** forget to close document objects
+
+## Anti-Patterns
+- **Manual Formatting**: Using direct formatting instead of styles
+- **No Structure**: Adding content without logical hierarchy
+- **Image Abuse**: Embedding images without size optimization
+- **Close Skipping**: Not properly closing/saving documents

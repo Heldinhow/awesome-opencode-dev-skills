@@ -3,22 +3,41 @@ name: jwt-auth
 description: "Implement JWT (JSON Web Token) authentication for secure API access."
 ---
 
-# jwt-auth
+# JWT Authentication
 
 ## Overview
-When you need stateless authentication for APIs
+JWT provides stateless authentication by embedding user claims in a signed token. This skill should be invoked when implementing API authentication, single sign-on, or stateless session management.
 
-## Process
-1. Generate JWT with payload (user ID, claims)
-2. Sign token with secret or private key
-3. Implement token validation middleware
-4. Handle token refresh and expiration
-5. Store tokens securely (httpOnly cookies)
+## Core Principles
+- **Stateless**: No server-side session storage needed
+- **Signed**: Use HMAC or RSA for token signing
+- **Claims-Based**: Embed user info in token payload
+- **Expiration**: Set appropriate token lifetimes
 
-## Examples
-- API authentication
-- Single sign-on (SSO)
-- Stateless session management
+## Preparation Checklist
+- [ ] Choose signing algorithm (HS256, RS256)
+- [ ] Generate secret key or key pair
+- [ ] Define token claims structure
+- [ ] Plan token storage strategy
 
-## Limitations
-Token storage and revocation challenges; requires secure key management
+## Step-by-Step Process
+1. **Generate**: Create JWT with user claims
+2. **Sign**: Sign with secret or private key
+3. **Issue**: Send token to client (cookie or header)
+4. **Validate**: Implement middleware to verify tokens
+5. **Refresh**: Handle token refresh logic
+6. **Revocate**: Plan for token revocation
+
+## Do's and Don'ts
+- ✅ **Do** use httpOnly cookies for browser storage
+- ✅ **Do** implement token refresh mechanism
+- ✅ **Do** validate token expiration
+- ❌ **Don't** store sensitive data in JWT payload
+- ❌ **Don't** use weak secret keys
+- ❌ **Don't** skip signature verification
+
+## Anti-Patterns
+- **Sensitive Data**: Storing passwords in JWT
+- **No Expiration**: Tokens that never expire
+- **Weak Keys**: Using simple secret keys
+- **No Validation**: Skipping signature checks

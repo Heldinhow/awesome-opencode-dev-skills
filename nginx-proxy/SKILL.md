@@ -3,22 +3,41 @@ name: nginx-proxy
 description: "Configure Nginx as a reverse proxy for routing traffic to backend services."
 ---
 
-# nginx-proxy
+# Nginx Reverse Proxy
 
 ## Overview
-When you need to route external traffic to internal services or load balance
+Nginx is a high-performance web server that excels as a reverse proxy for routing traffic to backend services. This skill should be invoked when routing external traffic to internal services, implementing SSL termination, or setting up load balancing.
 
-## Process
-1. Install and configure Nginx
-2. Define upstream backend servers
-3. Set up location blocks for routing
-4. Configure SSL/TLS termination
-5. Test configuration and reload Nginx
+## Core Principles
+- **Reverse Proxy**: Forward requests to backend services
+- **Upstream**: Define backend server groups
+- **Location Routing**: Use location blocks for path-based routing
+- **SSL/TLS**: Terminate HTTPS for backends
 
-## Examples
-- Routing to multiple backend services
-- SSL termination for HTTPS
-- Load balancing across servers
+## Preparation Checklist
+- [ ] Install Nginx
+- [ ] Plan routing structure
+- [ ] Identify backend services
+- [ ] Prepare SSL certificates
 
-## Limitations
-Not a full application server; limited dynamic service discovery
+## Step-by-Step Process
+1. **Install**: Set up Nginx
+2. **Define Upstreams**: Configure backend servers
+3. **Route**: Set up location blocks
+4. **SSL**: Configure TLS termination
+5. **Test**: Validate configuration
+6. **Reload**: Apply changes
+
+## Do's and Don'ts
+- ✅ **Do** use upstream blocks for backends
+- ✅ **Do** include security headers
+- ✅ **Do** validate config before reload
+- ❌ **Don't** skip SSL configuration
+- ❌ **Don't** ignore upstream health checks
+- ❌ **Don't** forget to reload after changes
+
+## Anti-Patterns
+- **No Upstreams**: Hardcoding backend URLs
+- **Missing Headers**: Not adding security headers
+- **No Health Checks**: Not monitoring backends
+- **Config Errors**: Reloading invalid config

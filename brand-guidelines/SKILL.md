@@ -3,22 +3,41 @@ name: brand-guidelines
 description: "Apply official brand colors and typography to artifacts for cohesive visual identity."
 ---
 
-# brand-guidelines
+# Brand Guidelines
 
 ## Overview
-When brand colors, typography, or company design standards apply
+Brand guidelines ensure consistent visual identity across all organizational materials. This skill should be invoked when brand colors, typography, or company design standards need to be applied to presentations, documents, websites, or any visual content.
 
-## Process
-1. Identify brand colors from guidelines
-2. Apply main colors (dark, light, gray)
-3. Use accent colors for shapes and highlights
-4. Apply typography (Poppins for headings, Lora for body)
-5. Ensure color contrast and readability
+## Core Principles
+- **Consistency**: Apply the same colors and typography across all materials
+- **Color Hierarchy**: Use primary, secondary, and accent colors appropriately
+- **Typography Standards**: Follow font family and size specifications
+- **Accessibility**: Ensure color contrast meets WCAG standards
 
-## Examples
-- Creating branded presentations
-- Applying company style to documents
-- Visual content with consistent branding
+## Preparation Checklist
+- [ ] Obtain brand guidelines document
+- [ ] Identify primary, secondary, and accent colors
+- [ ] Get approved typography (font families, sizes, weights)
+- [ ] Access brand assets (logos, icons if needed)
 
-## Limitations
-Requires brand guidelines; limited customization
+## Step-by-Step Process
+1. **Identify Colors**: Extract main brand colors (dark, light, neutral)
+2. **Apply Primary**: Use primary color for main elements and calls to action
+3. **Add Accent**: Use accent colors for highlights and visual interest
+4. **Set Typography**: Apply heading and body fonts per guidelines
+5. **Verify Contrast**: Check color combinations meet accessibility standards
+6. **Apply Consistently**: Ensure all elements follow brand patterns
+
+## Do's and Don'ts
+- ✅ **Do** use brand colors exactly as specified (hex values)
+- ✅ **Do** maintain proper color contrast ratios
+- ✅ **Do** use typography hierarchy consistently
+- ❌ **Don't** mix unofficial colors into branded materials
+- ❌ **Don't** stretch or modify logos without permission
+- ❌ **Don't** use non-approved fonts
+
+## Anti-Patterns
+- **Color Mixing**: Adding non-brand colors "for variety"
+- **Inconsistent Typography**: Mixing font weights and sizes randomly
+- **Logo Abuse**: Stretching, recoloring, or modifying logos
+- **Accessibility Ignorance**: Using low-contrast color combinations
