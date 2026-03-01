@@ -1,28 +1,20 @@
----
-name: t3-stack
-description: T3 Stack (Next.js, tRPC, Prisma)
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# t3-stack
-
-T3 Stack (Next.js, tRPC, Prisma)
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need T3 Stack (Next.js, tRPC, Prisma)
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "t3-stack",
+  "description": "Build full-stack TypeScript applications using T3 Stack (Next.js, tRPC, Prisma, Tailwind).",
+  "trigger": "When building type-safe full-stack applications with Next.js",
+  "input": "Application requirements, database schema, API definitions",
+  "steps": [
+    "Initialize T3 app with create-t3-app",
+    "Define Prisma schema",
+    "Create tRPC routers",
+    "Build Next.js pages with tRPC queries",
+    "Deploy to Vercel or similar"
+  ],
+  "output": "Full-stack TypeScript application",
+  "use_cases": [
+    "Type-safe web applications",
+    "Rapid prototyping with full-stack types",
+    "Next.js apps with type-safe API"
+  ],
+  "limitations": "T3-specific; less flexibility than custom setups"
+}
