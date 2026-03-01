@@ -1,28 +1,20 @@
----
-name: nginx-proxy
-description: Nginx reverse proxy configuration
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# nginx-proxy
-
-Nginx reverse proxy configuration
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Nginx reverse proxy configuration
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "nginx-proxy",
+  "description": "Configure Nginx as a reverse proxy for routing traffic to backend services.",
+  "trigger": "When you need to route external traffic to internal services or load balance",
+  "input": "Nginx configuration, upstream server definitions, domain names",
+  "steps": [
+    "Install and configure Nginx",
+    "Define upstream backend servers",
+    "Set up location blocks for routing",
+    "Configure SSL/TLS termination",
+    "Test configuration and reload Nginx"
+  ],
+  "output": "Configured reverse proxy routing traffic to backend services",
+  "use_cases": [
+    "Routing to multiple backend services",
+    "SSL termination for HTTPS",
+    "Load balancing across servers"
+  ],
+  "limitations": "Not a full application server; limited dynamic service discovery"
+}
