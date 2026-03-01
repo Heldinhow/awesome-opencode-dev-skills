@@ -1,21 +1,20 @@
----
-name: jwt-auth
-description: JWT authentication patterns
-
-# jwt-auth
-
-JWT authentication patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need JWT authentication patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "jwt-auth",
+  "description": "Implement JWT (JSON Web Token) authentication for secure API access.",
+  "trigger": "When you need stateless authentication for APIs",
+  "input": "User credentials, secret key, token expiration requirements",
+  "steps": [
+    "Generate JWT with payload (user ID, claims)",
+    "Sign token with secret or private key",
+    "Implement token validation middleware",
+    "Handle token refresh and expiration",
+    "Store tokens securely (httpOnly cookies)"
+  ],
+  "output": "JWT authentication system for APIs",
+  "use_cases": [
+    "API authentication",
+    "Single sign-on (SSO)",
+    "Stateless session management"
+  ],
+  "limitations": "Token storage and revocation challenges; requires secure key management"
+}
