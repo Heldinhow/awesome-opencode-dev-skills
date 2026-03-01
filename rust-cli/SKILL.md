@@ -1,28 +1,20 @@
----
-name: rust-cli
-description: Rust CLI application patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# rust-cli
-
-Rust CLI application patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Rust CLI application patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "rust-cli",
+  "description": "Build command-line applications in Rust with proper CLI patterns and argument parsing.",
+  "trigger": "When creating CLI tools in Rust",
+  "input": "CLI command definitions, arguments, Rust project setup",
+  "steps": [
+    "Initialize Rust project with cargo",
+    "Set up CLI argument parsing (clap)",
+    "Implement command handlers",
+    "Add proper error handling",
+    "Build and test executable"
+  ],
+  "output": "Rust CLI application with proper CLI patterns",
+  "use_cases": [
+    "Building command-line tools",
+    "Systems programming utilities",
+    "High-performance CLI applications"
+  ],
+  "limitations": "Steeper learning curve than scripting languages"
+}
