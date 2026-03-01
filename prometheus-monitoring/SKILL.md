@@ -1,28 +1,20 @@
----
-name: prometheus-monitoring
-description: Prometheus metrics and monitoring
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# prometheus-monitoring
-
-Prometheus metrics and monitoring
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Prometheus metrics and monitoring
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "prometheus-monitoring",
+  "description": "Implement Prometheus metrics and monitoring for applications.",
+  "trigger": "When you need to collect and expose application metrics",
+  "input": "Metric definitions, endpoint configuration, scrape targets",
+  "steps": [
+    "Add Prometheus client library",
+    "Define metrics (counters, gauges, histograms)",
+    "Expose /metrics endpoint",
+    "Configure Prometheus to scrape metrics",
+    "Create alerts and dashboards"
+  ],
+  "output": "Application with exposed Prometheus metrics",
+  "use_cases": [
+    "Application performance monitoring",
+    "Infrastructure metrics",
+    "Custom business metrics"
+  ],
+  "limitations": "Requires Prometheus infrastructure; additional overhead"
+}
