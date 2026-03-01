@@ -1,21 +1,20 @@
----
-name: TDD
-description: Test-driven development patterns
-
-# TDD
-
-Test-driven development patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Test-driven development patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "tdd",
+  "description": "Apply test-driven development methodology for reliable, maintainable code.",
+  "trigger": "When writing code with TDD methodology",
+  "input": "Feature requirements, test framework, code to test",
+  "steps": [
+    "Write failing test (Red)",
+    "Write minimal code to pass (Green)",
+    "Refactor while keeping tests passing (Refactor)",
+    "Repeat for each requirement",
+    "Maintain test suite"
+  ],
+  "output": "Test-driven code with coverage",
+  "use_cases": [
+    "Building reliable features",
+    "Regression prevention",
+    "Living documentation"
+  ],
+  "limitations": "Slower initial development"
+}
