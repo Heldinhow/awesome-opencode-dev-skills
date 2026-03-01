@@ -1,20 +1,24 @@
-{
-  "title": "dotnet-fluentvalidation",
-  "description": "Implement declarative validation rules using FluentValidation in .NET.",
-  "trigger": "When validating input models, commands, DTOs, or needing complex validation",
-  "input": "Models to validate, validation rules",
-  "steps": [
-    "Install FluentValidation package",
-    "Create validator classes inheriting from AbstractValidator",
-    "Define validation rules fluently",
-    "Integrate with MediatR pipeline",
-    "Handle validation errors"
-  ],
-  "output": "Validation rules for input models",
-  "use_cases": [
-    "API input validation",
-    "Command validation in CQRS",
-    "Complex business rule validation"
-  ],
-  "limitations": "Additional library dependency; learning curve for fluent syntax"
-}
+---
+name: dotnet-fluentvalidation
+description: "Implement declarative validation rules using FluentValidation in .NET."
+---
+
+# dotnet-fluentvalidation
+
+## Overview
+When validating input models, commands, DTOs, or needing complex validation
+
+## Process
+1. Install FluentValidation package
+2. Create validator classes inheriting from AbstractValidator
+3. Define validation rules fluently
+4. Integrate with MediatR pipeline
+5. Handle validation errors
+
+## Examples
+- API input validation
+- Command validation in CQRS
+- Complex business rule validation
+
+## Limitations
+Additional library dependency; learning curve for fluent syntax
