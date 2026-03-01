@@ -1,28 +1,20 @@
----
-name: deno-runtime
-description: Deno runtime patterns
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# deno-runtime
-
-Deno runtime patterns
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Deno runtime patterns
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "deno-runtime",
+  "description": "Build applications using Deno runtime with TypeScript support and built-in tooling.",
+  "trigger": "When you need to create JavaScript/TypeScript applications with Deno",
+  "input": "TypeScript code, Deno-specific modules, dependencies (URL imports)",
+  "steps": [
+    "Initialize Deno project",
+    "Write TypeScript code with Deno APIs",
+    "Use URL imports for dependencies",
+    "Run with deno run command",
+    "Deploy to Deno Deploy or compatible platform"
+  ],
+  "output": "Deno application with TypeScript support",
+  "use_cases": [
+    "Server-side TypeScript applications",
+    "Serverless functions",
+    "Scripting with modern JavaScript"
+  ],
+  "limitations": "Smaller ecosystem than Node.js; some Node compatibility issues"
+}
