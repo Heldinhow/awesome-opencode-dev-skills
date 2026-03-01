@@ -1,28 +1,20 @@
----
-name: bun-runtime
-description: Bun runtime best practices
-metadata:
-  clawdbot:
-    emoji: "🎯"
-    requires:
-      tools: [exec]
-      os: [linux, darwin, win32]
----
-
-# bun-runtime
-
-Bun runtime best practices
-
-## Overview
-
-Auto-generated skill.
-
-## When to Use
-
-- When you need Bun runtime best practices
-
-## Key Concepts
-
-1. Pattern 1
-2. Pattern 2
-3. Pattern 3
+{
+  "title": "bun-runtime",
+  "description": "Build JavaScript/TypeScript applications using Bun runtime for fast performance.",
+  "trigger": "When you need fast JavaScript runtime with built-in tooling",
+  "input": "JavaScript/TypeScript code, Bun-specific APIs",
+  "steps": [
+    "Initialize Bun project with bun init",
+    "Write TypeScript code with Bun APIs",
+    "Use Bun's built-in package manager",
+    "Run scripts with bun run",
+    "Deploy to Bun-compatible platforms"
+  ],
+  "output": "Fast JavaScript/TypeScript application",
+  "use_cases": [
+    "High-performance servers",
+    "Scripting with native speed",
+    "All-in-one JavaScript toolkit"
+  ],
+  "limitations": "Smaller ecosystem than Node.js; less mature"
+}
