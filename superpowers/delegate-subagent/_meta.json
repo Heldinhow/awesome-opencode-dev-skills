@@ -1,0 +1,5 @@
+{
+  "name": "delegate-subagent",
+  "version": "1.0.0",
+  "description": "Delegate tasks to a single subagent"
+}

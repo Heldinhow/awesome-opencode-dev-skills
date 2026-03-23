@@ -1,0 +1,5 @@
+{
+  "name": "dispatching-parallel-agents",
+  "version": "1.0.0",
+  "description": "Run multiple independent tasks in parallel"
+}
