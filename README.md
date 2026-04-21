@@ -4,6 +4,12 @@ Custom skills, agents and configurations for OpenCode and OhMyOpenCode.
 
 ## Skills
 
+### Design Skills
+
+| Skill | Description |
+|-------|-------------|
+| [huashu-design](./huashu-design/) | High-fidelity HTML design skill for prototypes, animations, slide decks, infographics, and design direction exploration |
+
 ### .NET Skills
 
 | Skill | Description |
