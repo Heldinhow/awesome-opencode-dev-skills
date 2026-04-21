@@ -1,0 +1,9 @@
+{
+  "name": "huashu-design",
+  "description": "Create high-fidelity HTML prototypes, animations, slide decks, infographics, and design explorations with strong brand context",
+  "emoji": "🎨",
+  "requires": {
+    "tools": ["exec"],
+    "os": ["linux", "darwin", "win32"]
+  }
+}
