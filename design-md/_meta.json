@@ -1,0 +1,13 @@
+{
+  "name": "design-md",
+  "version": "1.0.0",
+  "description": "DESIGN.md format for describing visual identity to coding agents. From Google Labs.",
+  "category": "frontend-design",
+  "tags": ["design-system", "design-tokens", "css", "styling", "ui"],
+  "homepage": "https://github.com/google-labs/design.md",
+  "license": "Apache-2.0",
+  "author": "Google Labs",
+  "repository": "https://github.com/google-labs/design.md",
+  "languages": ["markdown", "yaml", "typescript"],
+  "requires": ["npm", "@google/design.md"]
+}
