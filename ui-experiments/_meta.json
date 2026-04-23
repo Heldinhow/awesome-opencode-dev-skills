@@ -1,0 +1,13 @@
+{
+  "name": "ui-experiments",
+  "version": "1.0.0",
+  "description": "Collection of beautifully designed UI experiments (Dark Table, AI Chat, SaaS Dashboard, Crypto Wallet, Charts, Calendar, Schema Visualizer) built with Origin UI and shadcn/ui.",
+  "category": "frontend-design",
+  "tags": ["shadcn-ui", "origin-ui", "react", "tailwind", "ui", "experiments", "dashboard", "charts"],
+  "homepage": "https://github.com/origin-space/ui-experiments",
+  "license": "proprietary",
+  "author": "Origin UI / Crafted",
+  "repository": "https://github.com/origin-space/ui-experiments",
+  "languages": ["typescript", "tsx", "react"],
+  "requires": ["pnpm", "shadcn"]
+}
